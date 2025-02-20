@@ -1,0 +1,634 @@
+/* General Body Styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #030303; /* Dark background color */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.brand-name {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-item {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 1rem;
+  padding: 10px 0;
+}
+
+.nav-item:hover {
+  color: #007bff; /* Hover effect */
+}
+
+.menu-btn {
+  display: none; /* Hide menu button for large screens */
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+}
+
+.mobile-menu {
+  display: none; /* Hide mobile menu by default */
+}
+
+.mobile-menu.open {
+  display: block; /* Show mobile menu when open */
+}
+
+.dropdown-btn {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: white;
+}
+
+.dropdown-content {
+  display: none;
+  list-style: none;
+  background-color: #343a40;
+  padding-left: 20px;
+}
+
+.dropdown-content li {
+  margin: 10px 0;
+}
+
+.dropdown-btn:hover + .dropdown-content,
+.dropdown-content:hover {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block; /* Show menu button for small screens */
+  }
+
+  .nav-links {
+    display: none; /* Hide default navigation links */
+  }
+  
+  .mobile-menu ul {
+    padding: 0;
+  }
+
+  .mobile-menu li {
+    margin: 10px 0;
+  }
+}
+
+
+
+
+
+
+/* Background Section */
+.background-section {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* Full height of the viewport */
+}
+
+/* Statement Section start */
+
+
+.statement-container {
+  position: absolute;
+  top: 65%; /* Adjust to move it lower */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background: rgba(255, 255, 255, 0.7); /* Transparent white box */
+  padding: 15px 25px;
+  width: 50%;
+  max-width: 400px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.statement-text {
+  font-size: 1.8rem; /* Smaller heading */
+  font-weight: bold;
+  color: black;
+}
+
+.statement-container p {
+  font-size: 1rem;
+  margin-top: 8px;
+  color: black;
+}
+
+/* Styling for the Property Cards */
+.card {
+  max-width: 250px; /* Limit card width */
+  margin: 0 auto; /* Center card in its container */
+  border-radius: 8px; /* Rounded corners */
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Slightly enlarge card on hover */
+}
+
+/* Styling for the card images to maintain a smaller size */
+.card-img-top {
+  height: 180px; /* Set a fixed height for the image */
+  object-fit: cover; /* Ensure image doesn't stretch */
+}
+
+/* Styling for the card body */
+.card-body {
+  padding: 15px;
+  font-size: 14px; /* Smaller text */
+}
+
+/* Adjust buttons to fit the smaller cards */
+.card .btn {
+  font-size: 14px;
+  padding: 5px 10px;
+}
+
+/* Responsive Layout: Ensure the cards scale well on smaller screens */
+@media (max-width: 768px) {
+  .card {
+    max-width: 200px; /* Even smaller cards on mobile */
+  }
+
+  .card-img-top {
+    height: 150px; /* Smaller images on mobile */
+  }
+}
+/* Home page CSS code end*/
+
+
+
+
+
+
+
+
+
+
+/* Contact CSS code*/
+
+
+/* Ensure full height layout for the contact page */
+.contact-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Full-page background image */
+.contact-bg {
+  background-image: url("./Images/ContactUsBg.png"); /* Change this to the correct image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 20px;
+  margin-top: 100px; /* Increased margin to add more space below the navbar */
+}
+
+/* Dark overlay for the background to make the card stand out */
+.contact-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay to improve contrast */
+  z-index: 0; /* Ensures overlay stays behind the card */
+}
+
+/* Contact card styling */
+.contact-card {
+  background: rgba(255, 255, 255, 0.9); /* Slight transparency for better visibility */
+  border-radius: 10px;
+  padding: 40px; /* Increased padding for card */
+  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.2); /* Stronger shadow for card */
+  max-width: 450px;
+  width: 100%; /* Ensure responsiveness */
+  position: relative;
+  z-index: 1; /* Keeps the card above the overlay */
+}
+
+/* Contact card text styling */
+.contact-card ul {
+  font-size: 1.1rem;
+  padding-left: 20px;
+}
+
+.contact-card li {
+  margin-bottom: 15px; /* Increased space between list items */
+}
+
+/* Footer styling */
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 20px 0; /* Increased padding for footer */
+  width: 100%;
+  margin-top: 40px; /* Added space between content and footer */
+}
+
+
+
+/* Contact CSS code end*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer CSS code*/
+
+/* Footer Styling */
+.footer {
+  background-color: #222;
+  color: white;
+  padding: 30px 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  width: 100%; /* Full width */
+  position: relative;
+}
+
+/* Footer Container */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto; /* Center the footer content */
+}
+
+/* Footer Section */
+.footer-section {
+  flex: 1 1 200px;
+  margin: 15px;
+  text-align: left;
+}
+
+/* Footer Section Titles */
+.footer-section h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Footer Text */
+.footer-section p, .footer-section ul {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Remove list styling */
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Links Styling */
+.footer-section a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: #fff;
+}
+
+/* Social Media Links */
+.social-links a {
+  color: #ccc;
+  margin: 0 10px;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #00b0ff;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  background-color: #111;
+  padding: 10px 0;
+  font-size: 12px;
+  text-align: center;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Wrapper for the entire blogs section */
+.blogs-wrapper {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f5f5f5; /* Light background for contrast */
+}
+/* Full-width banner at the top */
+.blogs-banner {
+  width: 100%;
+  min-height: 50vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding-top: 100px; /* Push content below fixed navbar */
+}
+
+/* Content container */
+.blogs-content {
+  margin-top: 80px; /* Adjust based on navbar height */
+}
+
+/* Individual blog post styling */
+.blog-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: scale(1.02);
+  
+}
+
+/* Blog content layout */
+.blog-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  
+}
+
+/* Blog images */
+.blog-details img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Blog text */
+.blog-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .blog-details {
+    flex-direction: row;
+    align-items: center;
+    background: #e5c4c4;
+
+  }
+
+  .blog-details img {
+    width: 40%;
+  }
+
+  .blog-card p {
+    width: 55%;
+    
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* Background styling */
+.our-services {
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding-top: 100px;
+}
+
+/* Title styling */
+.our-services h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Location card styling */
+.location-card {
+  background: rgba(34, 32, 32, 0.9);
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.location-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 15px rgba(151, 143, 143, 0.2);
+}
+
+/* Card title styling */
+.location-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fffefe;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .our-services {
+    padding-top: 80px;
+  }
+
+  .our-services h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .our-services h2 {
+    font-size: 1.5rem;
+  }
+
+  .location-card {
+    padding: 15px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Flats Page Styling */
+.flats-container {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  padding-top: 100px;
+}
+
+/* Heading Styling */
+.flats-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Card Styling */
+.flat-card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.flat-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Styling */
+.flat-card img {
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+/* Card Body Styling */
+.flat-card .card-body {
+  padding: 20px;
+  background-color: white;
+}
+
+.flat-card .card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.flat-card .card-text {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+/* Button Styling */
+.view-details-btn {
+  background-color: #080808;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.view-details-btn:hover {
+  background-color: #7e7979;
+}
